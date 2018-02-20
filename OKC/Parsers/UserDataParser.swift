@@ -7,18 +7,27 @@
 //
 
 import Foundation
-//maybe rename to UserData
+
 struct UserData: Decodable {
     let data: [FetchedData]
 }
 
 struct FetchedData: Decodable {
+    let age: Int
+    let username: String
     let match: Int
     let last_login: Int
     let location: [String: String]
-    //let liked: Bool
+    let photo: UserPhoto
 }
 
+struct UserPhoto : Decodable {
+    let fullPaths: [String: URL]
+    
+    enum CodingKeys: String, CodingKey {
+        case fullPaths = "full_paths"
+    }
+}
 
 
 

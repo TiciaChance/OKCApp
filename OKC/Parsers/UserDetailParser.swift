@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct UserDetailParser {
+    
+    func parseUserDetails([String: String]) -> Photo? {
+        
+        guard let large = photoDictionary["small"],
+            let small = photoDictionary["small"],
+            let medium = photoDictionary["medium"],
+            let original = photoDictionary["original"] else {
+                return nil
+        }
+        return Photo(large: large, small: small, medium: medium, original: original)
+    }
+}

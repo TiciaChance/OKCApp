@@ -8,14 +8,19 @@
 
 import Foundation
 
-struct UserImageParser {
-    //rename dictionary
-    //consistencies of img or photo
-    func parseImage(from dictionary: [String: String]) {
-        let largePhoto = dictionary["large"]
-        let small = dictionary["small"]
-        let medium = dictionary["medium"]
-        let original = dictionary["original"]
-    }
+struct UserPhotoParser {
     
+    func parsePhotoSizes(from photoDictionary: [String: URL]) -> Photo? {
+        
+        guard let large = photoDictionary["small"],
+            let small = photoDictionary["small"],
+            let medium = photoDictionary["medium"],
+            let original = photoDictionary["original"] else {
+                return nil
+        }
+        return Photo(large: large,
+                     small: small,
+                     medium: medium,
+                     original: original)
+    }
 }

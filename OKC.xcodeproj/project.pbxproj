@@ -12,6 +12,14 @@
 		1E337D352035127800A9EAA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E337D332035127800A9EAA1 /* Main.storyboard */; };
 		1E337D372035127800A9EAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E337D362035127800A9EAA1 /* Assets.xcassets */; };
 		1E337D3A2035127800A9EAA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E337D382035127800A9EAA1 /* LaunchScreen.storyboard */; };
+		1E337D442035169E00A9EAA1 /* OKCNetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D432035169E00A9EAA1 /* OKCNetworkingAPI.swift */; };
+		1E337D4820351ACE00A9EAA1 /* UserPhotoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D4720351ACE00A9EAA1 /* UserPhotoParser.swift */; };
+		1E337D4A20351ADF00A9EAA1 /* UserDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D4920351ADF00A9EAA1 /* UserDataParser.swift */; };
+		1E337D4D2039D17800A9EAA1 /* UserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D4C2039D17800A9EAA1 /* UserPhoto.swift */; };
+		1E337D512039D6D500A9EAA1 /* UserLocationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D502039D6D500A9EAA1 /* UserLocationParser.swift */; };
+		1E337D532039D78100A9EAA1 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D522039D78100A9EAA1 /* UserLocation.swift */; };
+		1E337D61203A01F900A9EAA1 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D60203A01F900A9EAA1 /* UserDetails.swift */; };
+		1E337D6B203B758100A9EAA1 /* CellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D6A203B758100A9EAA1 /* CellLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		1E337D362035127800A9EAA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E337D392035127800A9EAA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E337D3B2035127800A9EAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E337D432035169E00A9EAA1 /* OKCNetworkingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKCNetworkingAPI.swift; sourceTree = "<group>"; };
+		1E337D4720351ACE00A9EAA1 /* UserPhotoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoParser.swift; sourceTree = "<group>"; };
+		1E337D4920351ADF00A9EAA1 /* UserDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataParser.swift; sourceTree = "<group>"; };
+		1E337D4C2039D17800A9EAA1 /* UserPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoto.swift; sourceTree = "<group>"; };
+		1E337D502039D6D500A9EAA1 /* UserLocationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationParser.swift; sourceTree = "<group>"; };
+		1E337D522039D78100A9EAA1 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		1E337D60203A01F900A9EAA1 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		1E337D6A203B758100A9EAA1 /* CellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,78 @@
 		1E337D2E2035127800A9EAA1 /* OKC */ = {
 			isa = PBXGroup;
 			children = (
-				1E337D2F2035127800A9EAA1 /* AppDelegate.swift */,
-				1E337D312035127800A9EAA1 /* ViewController.swift */,
-				1E337D332035127800A9EAA1 /* Main.storyboard */,
-				1E337D362035127800A9EAA1 /* Assets.xcassets */,
-				1E337D382035127800A9EAA1 /* LaunchScreen.storyboard */,
-				1E337D3B2035127800A9EAA1 /* Info.plist */,
+				1E337D41203512A300A9EAA1 /* AppDelegate */,
+				1E337D4B2039D15D00A9EAA1 /* Models */,
+				1E337D42203512D100A9EAA1 /* Networking */,
+				1E337D452035183400A9EAA1 /* Parsers */,
+				1E337D462035186100A9EAA1 /* ViewControllers */,
+				1E337D4E2039D3A300A9EAA1 /* Views */,
+				1E337D4F2039D3BE00A9EAA1 /* Resources */,
 			);
 			path = OKC;
+			sourceTree = "<group>";
+		};
+		1E337D41203512A300A9EAA1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1E337D2F2035127800A9EAA1 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1E337D42203512D100A9EAA1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1E337D432035169E00A9EAA1 /* OKCNetworkingAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1E337D452035183400A9EAA1 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				1E337D4720351ACE00A9EAA1 /* UserPhotoParser.swift */,
+				1E337D4920351ADF00A9EAA1 /* UserDataParser.swift */,
+				1E337D502039D6D500A9EAA1 /* UserLocationParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		1E337D462035186100A9EAA1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E337D312035127800A9EAA1 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1E337D4B2039D15D00A9EAA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E337D4C2039D17800A9EAA1 /* UserPhoto.swift */,
+				1E337D522039D78100A9EAA1 /* UserLocation.swift */,
+				1E337D60203A01F900A9EAA1 /* UserDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1E337D4E2039D3A300A9EAA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E337D332035127800A9EAA1 /* Main.storyboard */,
+				1E337D382035127800A9EAA1 /* LaunchScreen.storyboard */,
+				1E337D6A203B758100A9EAA1 /* CellLayout.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E337D4F2039D3BE00A9EAA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E337D3B2035127800A9EAA1 /* Info.plist */,
+				1E337D362035127800A9EAA1 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +217,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E337D322035127800A9EAA1 /* ViewController.swift in Sources */,
+				1E337D6B203B758100A9EAA1 /* CellLayout.swift in Sources */,
 				1E337D302035127800A9EAA1 /* AppDelegate.swift in Sources */,
+				1E337D4820351ACE00A9EAA1 /* UserPhotoParser.swift in Sources */,
+				1E337D442035169E00A9EAA1 /* OKCNetworkingAPI.swift in Sources */,
+				1E337D4A20351ADF00A9EAA1 /* UserDataParser.swift in Sources */,
+				1E337D532039D78100A9EAA1 /* UserLocation.swift in Sources */,
+				1E337D512039D6D500A9EAA1 /* UserLocationParser.swift in Sources */,
+				1E337D4D2039D17800A9EAA1 /* UserPhoto.swift in Sources */,
+				1E337D61203A01F900A9EAA1 /* UserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TDFXWLD7DJ;
-				INFOPLIST_FILE = OKC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OKC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.electricchance.OKC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TDFXWLD7DJ;
-				INFOPLIST_FILE = OKC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OKC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.electricchance.OKC;
 				PRODUCT_NAME = "$(TARGET_NAME)";

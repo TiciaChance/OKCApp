@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct Location {
+    let countryName: String
+    let countryCode: String
+    let stateName: String
+    let cityName: String
+    let stateCode: String
+}
