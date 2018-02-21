@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     private let networkCall = OKCNetworkingAPI()
     private let photoParser = UserPhotoParser()
     private let locationParser = UserLocationParser()
-    private var userDetails = [UserDetails]()
+    internal var userDetails = [UserDetails]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +98,22 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             ageLocationLabel.text = "\(userDetailsIndexPath.age) • \(userDetailsIndexPath.location.cityName), \(userDetailsIndexPath.location.stateCode)"
         }
         return cell
+    }
+    
+     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.4) {
+            if let cell = collectionView.cellForItem(at: indexPath) {
+                cell.viewWithTag(2)?.transform = .init(scaleX: 0.55, y: 0.55)
+            }
+        }
+    }
+    
+     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.4) {
+            if let cell = collectionView.cellForItem(at: indexPath) {
+                cell.viewWithTag(2)?.transform = .identity
+            }
+        }
     }
 }
 

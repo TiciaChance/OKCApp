@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OKC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserView" id="BYZ-38-t0r" customClass="ViewController" customModule="OKC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tj2-J0-PFX"/>
                         <viewControllerLayoutGuide type="bottom" id="hdB-lK-W4Y"/>

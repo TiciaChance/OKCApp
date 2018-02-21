@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E020ED2203CFE92001D0737 /* OKCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E020ED1203CFE92001D0737 /* OKCTests.swift */; };
 		1E337D302035127800A9EAA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D2F2035127800A9EAA1 /* AppDelegate.swift */; };
 		1E337D322035127800A9EAA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D312035127800A9EAA1 /* ViewController.swift */; };
 		1E337D352035127800A9EAA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E337D332035127800A9EAA1 /* Main.storyboard */; };
@@ -22,7 +23,20 @@
 		1E337D6B203B758100A9EAA1 /* CellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E337D6A203B758100A9EAA1 /* CellLayout.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1E020ED4203CFE92001D0737 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E337D242035127800A9EAA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E337D2B2035127800A9EAA1;
+			remoteInfo = OKC;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1E020ECF203CFE92001D0737 /* OKCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OKCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E020ED1203CFE92001D0737 /* OKCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKCTests.swift; sourceTree = "<group>"; };
+		1E020ED3203CFE92001D0737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E337D2C2035127800A9EAA1 /* OKC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OKC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E337D2F2035127800A9EAA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E337D312035127800A9EAA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E020ECC203CFE92001D0737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E337D292035127800A9EAA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,10 +72,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E020ED0203CFE92001D0737 /* OKCTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E020ED1203CFE92001D0737 /* OKCTests.swift */,
+				1E020ED3203CFE92001D0737 /* Info.plist */,
+			);
+			path = OKCTests;
+			sourceTree = "<group>";
+		};
 		1E337D232035127800A9EAA1 = {
 			isa = PBXGroup;
 			children = (
 				1E337D2E2035127800A9EAA1 /* OKC */,
+				1E020ED0203CFE92001D0737 /* OKCTests */,
 				1E337D2D2035127800A9EAA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1E337D2C2035127800A9EAA1 /* OKC.app */,
+				1E020ECF203CFE92001D0737 /* OKCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +179,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E020ECE203CFE92001D0737 /* OKCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E020ED8203CFE92001D0737 /* Build configuration list for PBXNativeTarget "OKCTests" */;
+			buildPhases = (
+				1E020ECB203CFE92001D0737 /* Sources */,
+				1E020ECC203CFE92001D0737 /* Frameworks */,
+				1E020ECD203CFE92001D0737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E020ED5203CFE92001D0737 /* PBXTargetDependency */,
+			);
+			name = OKCTests;
+			productName = OKCTests;
+			productReference = 1E020ECF203CFE92001D0737 /* OKCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1E337D2B2035127800A9EAA1 /* OKC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E337D3E2035127800A9EAA1 /* Build configuration list for PBXNativeTarget "OKC" */;
@@ -174,6 +224,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Laticia Chance";
 				TargetAttributes = {
+					1E020ECE203CFE92001D0737 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1E337D2B2035127800A9EAA1;
+					};
 					1E337D2B2035127800A9EAA1 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -194,11 +249,19 @@
 			projectRoot = "";
 			targets = (
 				1E337D2B2035127800A9EAA1 /* OKC */,
+				1E020ECE203CFE92001D0737 /* OKCTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E020ECD203CFE92001D0737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E337D2A2035127800A9EAA1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +275,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E020ECB203CFE92001D0737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E020ED2203CFE92001D0737 /* OKCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E337D282035127800A9EAA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +301,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E020ED5203CFE92001D0737 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E337D2B2035127800A9EAA1 /* OKC */;
+			targetProxy = 1E020ED4203CFE92001D0737 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1E337D332035127800A9EAA1 /* Main.storyboard */ = {
@@ -251,6 +330,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E020ED6203CFE92001D0737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDFXWLD7DJ;
+				INFOPLIST_FILE = OKCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.electricchance.OKCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OKC.app/OKC";
+			};
+			name = Debug;
+		};
+		1E020ED7203CFE92001D0737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDFXWLD7DJ;
+				INFOPLIST_FILE = OKCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.electricchance.OKCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OKC.app/OKC";
+			};
+			name = Release;
+		};
 		1E337D3C2035127800A9EAA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +502,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E020ED8203CFE92001D0737 /* Build configuration list for PBXNativeTarget "OKCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E020ED6203CFE92001D0737 /* Debug */,
+				1E020ED7203CFE92001D0737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E337D272035127800A9EAA1 /* Build configuration list for PBXProject "OKC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

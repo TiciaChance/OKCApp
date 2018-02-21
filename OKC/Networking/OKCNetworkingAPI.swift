@@ -31,6 +31,8 @@ class OKCNetworkingAPI: NSObject {
         let defaultConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: defaultConfig)
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
+            let test = response as? HTTPURLResponse
+            print("\(test?.statusCode)")
             
             if let error = error {
                 print(error)
