@@ -17,19 +17,39 @@ struct FetchedData: Decodable {
     let username: String
     let match: Int
     let last_login: Int
-    let location: [String: String]
+   let location: Location
     let photo: UserPhoto
 }
 
 struct UserPhoto : Decodable {
-    let fullPaths: [String: URL]
+    let fullPaths: PhotoSize //[String: URL]
     
     enum CodingKeys: String, CodingKey {
         case fullPaths = "full_paths"
     }
 }
 
+struct PhotoSize : Decodable {
+    let large: URL
+    let small: URL
+    let medium: URL
+    let original: URL
+}
 
-
+struct Location : Decodable {
+    let countryName: String
+    let countryCode: String
+    let stateName: String
+    let cityName: String
+    let stateCode: String
+    
+    enum CodingKeys: String, CodingKey {
+        case countryCode = "country_code"
+        case cityName = "city_name"
+        case countryName = "country_name"
+        case stateName = "state_name"
+        case stateCode = "state_code"
+    }
+}
 
 

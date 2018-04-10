@@ -8,20 +8,15 @@
 
 import Foundation
 
-typealias OKCUserCompletion = (UserInfoResponse) -> Void
+typealias OKCUserCompletion = (Result<UserData>) -> Void
 
-enum UserInfoResponse {
-    case success(response: UserInfoResponseData)
-    case failure(error: Error)
+enum Result<T> {
+    case success(T)
+    case failure(Error)
 }
 
-struct UserInfoResponseData {
-    let result: UserData
-}
-
-class OKCNetworkingAPI: NSObject {
-    
-    let baseURLString = "https://www.okcupid.com/matchSample.json"
+final class OKCNetworkingAPI: NSObject {
+    private let baseURLString = "https://www.okcupid.com/matchSample.json"
     
     func getUserData(completion: @escaping OKCUserCompletion) {
         
@@ -31,19 +26,17 @@ class OKCNetworkingAPI: NSObject {
         let defaultConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: defaultConfig)
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
-            let test = response as? HTTPURLResponse
-            print("\(test?.statusCode)")
             
             if let error = error {
                 print(error)
-                completion(.failure(error: error))
+                completion(.failure(error))
             } else if let data = data {
                 do {
                     let jsonDecoder = JSONDecoder()
                     let userData = try jsonDecoder.decode(UserData.self, from: data)
-                    self.callbackOnMainThread(completion: completion, result: .success(response: UserInfoResponseData(result: userData)))
+                    self.callbackOnMainThread(completion: completion, result: Result<UserData>.success(userData))
                 } catch {
-                    self.callbackOnMainThread(completion: completion, result: .failure(error: error)) 
+                    self.callbackOnMainThread(completion: completion, result: .failure(error))
                     return
                 }
             }
@@ -51,7 +44,7 @@ class OKCNetworkingAPI: NSObject {
         task.resume()
     }
     
-    func callbackOnMainThread(completion: @escaping (UserInfoResponse) -> Void, result: UserInfoResponse) {
+    private func callbackOnMainThread(completion: @escaping OKCUserCompletion, result: Result<UserData>) {
         DispatchQueue.main.async {
             completion(result)
         }

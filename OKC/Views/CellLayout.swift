@@ -9,14 +9,14 @@
 import UIKit
 
 protocol CellLayoutDelegate: class {
-    func collectionView(_collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat
 }
 
 class CellLayout: UICollectionViewLayout {
     weak var delegate: CellLayoutDelegate!
     
     fileprivate var numberOfColumns = 2
-    fileprivate var cellPadding: CGFloat = 6
+    fileprivate var cellPadding: CGFloat = 10
     
     fileprivate var cache = [UICollectionViewLayoutAttributes]()
     
@@ -52,7 +52,7 @@ class CellLayout: UICollectionViewLayout {
             
             let indexPath = IndexPath(item: item, section: 0)
             
-            let photoHeight = delegate.collectionView(_collectionView: collectionView, heightForPhotoAtIndexPath: indexPath)
+            let photoHeight = delegate.collectionView(collectionView, heightForPhotoAtIndexPath: indexPath)
             let height = cellPadding * 2 + photoHeight
             let frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: height)
             let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)

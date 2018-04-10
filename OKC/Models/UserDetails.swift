@@ -12,5 +12,5 @@ struct UserDetails {
     let match: Int
     let username: String
     let location: Location
-    let photo: Photo
+    let photo: PhotoSize
 }

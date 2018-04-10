@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Browse Matches View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="UserView" id="BYZ-38-t0r" customClass="ViewController" customModule="OKC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserView" id="BYZ-38-t0r" customClass="BrowseMatchesViewController" customModule="OKC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tj2-J0-PFX"/>
                         <viewControllerLayoutGuide type="bottom" id="hdB-lK-W4Y"/>
@@ -24,10 +24,10 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k3T-iZ-anB">
                                 <rect key="frame" x="67" y="269" width="240" height="335"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.88952373059211443" green="0.89667113930644116" blue="0.92490878807106602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewLayout key="collectionViewLayout" id="V4h-eA-W06" customClass="CellLayout" customModule="OKC"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="fYA-ia-54V">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="fYA-ia-54V" customClass="BrowseMatchUserCell" customModule="OKC" customModuleProvider="target">
                                         <rect key="frame" x="26.5" y="0.0" width="187" height="297"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -85,12 +85,13 @@
                                             <constraint firstItem="9uc-J2-sD1" firstAttribute="top" secondItem="fYA-ia-54V" secondAttribute="top" id="uyO-FH-9H9"/>
                                         </constraints>
                                         <size key="customSize" width="187" height="297"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="B3M-sx-45x" id="wg6-gE-XUm"/>
+                                            <outlet property="matchPercentageLabel" destination="dJ5-oj-9Jc" id="6lO-sE-Hos"/>
+                                            <outlet property="usernameLabel" destination="b2i-l5-5U0" id="HdO-yR-Gid"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mcz-KY-WuZ"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JUL-5X-K8f"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,6 +113,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QvK-po-Rsi">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
